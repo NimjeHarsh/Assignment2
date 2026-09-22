@@ -59,8 +59,6 @@ int main()
 
     inputFile.close();
 
-    inputFile.close();
-
 #ifdef _DEBUG
     cout << "DEBUG: Student Information" << endl;
     cout << "--------------------------" << endl;
