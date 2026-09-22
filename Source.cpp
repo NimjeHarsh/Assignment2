@@ -15,6 +15,12 @@ struct STUDENT_DATA
 
 int main()
 {
+#ifdef PRE_RELEASE
+    cout << "Running PRE-RELEASE version" << endl;
+#else
+    cout << "Running STANDARD version" << endl;
+#endif
+
     vector<STUDENT_DATA> students;
 
 #ifdef PRE_RELEASE
@@ -67,12 +73,14 @@ int main()
     {
         cout << "First Name: " << student.firstName << endl;
         cout << "Last Name: " << student.lastName << endl;
-        #ifdef PRE_RELEASE
+
+#ifdef PRE_RELEASE
         cout << "Email: " << student.email << endl;
 #endif
+
         cout << endl;
     }
 #endif
 
     return 0;
-}    
+}
